@@ -2,4 +2,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Edu TAS Beginner", serif;
+}
+
+.bordo {
+    border: 1px solid red;
+}
+
+body {
+    background-image: url(../img/cork.png);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-image: url(../img/wall.png);
+}
+
+h1 {
+    align-self: center;
+    font-weight: bolder;
+}
+
+#cont {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 15px auto;
+}
+
+.card {
+    width: 31%;
+    margin: 20px 0;
+}
+
+figure {
+    position: relative;
+}
+
+.pin {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+}
+
+figcaption {
+    margin: 10px 15px;
+}
+
+.foto {
+    width: calc(100% - 30px);
+    margin: 15px;
+    aspect-ratio: 1;
 }
