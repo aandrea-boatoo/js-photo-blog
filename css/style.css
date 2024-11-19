@@ -37,11 +37,11 @@ h1 {
 .card {
     width: 31%;
     margin: 20px 0;
+    background-color: aliceblue;
+    position: relative;
+    transition: all 0.5s;
 }
 
-figure {
-    position: relative;
-}
 
 .pin {
     position: absolute;
@@ -52,11 +52,17 @@ figure {
 }
 
 figcaption {
-    margin: 10px 15px;
+    margin: 0 15px;
+    margin-bottom: 10px;
 }
 
 .foto {
     width: calc(100% - 30px);
     margin: 15px;
     aspect-ratio: 1;
+}
+
+.card:hover {
+    scale: 1.1;
+    rotate: 15deg;
 }
