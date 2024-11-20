@@ -7,7 +7,7 @@
 
 /* UTILITIES */
 .bordo {
-    border: 1px solid red;
+    border: 1px solid rgba(255, 0, 0, 0);
 }
 
 .d-none {
@@ -96,29 +96,34 @@ figcaption {
 }
 
 #overcont {
-    width: 80%;
     position: relative;
+    width: 90%;
     max-width: 840px;
-    margin: 0 auto;
+    margin: 75px auto;
+}
 
+#contImg {
+    position: relative;
+    max-width: 400px;
+    width: 80%;
+    margin: 30px auto 5px;
 }
 
 #overlay img {
-    max-width: 400px;
-    width: 80%;
-    margin: 90px auto;
+    width: 100%;
+    display: block;
 }
 
 #overlay button {
     background-color: aliceblue;
     color: red;
     position: absolute;
-    top: calc(45% - 200px);
-    left: calc(50% + 200px);
+    top: 0;
+    left: 100%;
     translate: -50% -50%;
     z-index: 100;
     border-radius: 50%;
-    width: 30px;
+    width: 45px;
     aspect-ratio: 1;
     cursor: pointer;
     font-weight: bolder;
@@ -130,12 +135,10 @@ p {
     width: 100%;
     padding: 15px;
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.50);
+    background-color: rgba(0, 0, 0, 0.675);
     color: aliceblue;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    translate: -50% -50%;
+    /* position: absolute; */
+    /* translate: -50% -100%; */
     font-size: xx-large;
     text-align: center;
 
@@ -147,10 +150,18 @@ p {
     .card {
         width: 40%;
     }
+
+    p {
+        font-size: x-large;
+    }
 }
 
 @media screen and (max-width: 425px) {
     .card {
         width: 75%;
+    }
+
+    p {
+        font-size: large;
     }
 }
