@@ -5,8 +5,13 @@
     font-family: "Edu TAS Beginner", serif;
 }
 
+/* UTILITIES */
 .bordo {
     border: 1px solid red;
+}
+
+.d-none {
+    display: none;
 }
 
 body {
@@ -15,23 +20,27 @@ body {
 
 /* HEADER */
 header {
+    position: sticky;
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 75px;
     background-image: url(../img/wall.png);
 }
 
 h1 {
+    font-size: 3em;
     align-self: center;
     font-weight: bolder;
+    text-transform: uppercase;
 }
 
 #cont {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    max-width: 900px;
+    max-width: 930px;
     margin: 15px auto;
+    padding: 30px;
 }
 
 .card {
@@ -39,6 +48,7 @@ h1 {
     margin: 20px 0;
     background-color: aliceblue;
     position: relative;
+    box-shadow: 1px 0 rgba(0, 0, 0, 0.482);
     transition: all 0.5s;
 }
 
@@ -54,6 +64,7 @@ h1 {
 figcaption {
     margin: 0 15px;
     margin-bottom: 10px;
+    text-transform: capitalize;
 }
 
 .foto {
@@ -64,5 +75,82 @@ figcaption {
 
 .card:hover {
     scale: 1.1;
-    rotate: 15deg;
+    rotate: 10deg;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 5px 3px 40px rgb(0, 0, 0);
+}
+
+.card:hover .pin {
+    display: none;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+#overcont {
+    width: 80%;
+    position: relative;
+    max-width: 840px;
+    margin: 0 auto;
+
+}
+
+#overlay img {
+    max-width: 400px;
+    width: 80%;
+    margin: 90px auto;
+}
+
+#overlay button {
+    background-color: aliceblue;
+    color: red;
+    position: absolute;
+    top: calc(45% - 200px);
+    left: calc(50% + 200px);
+    translate: -50% -50%;
+    z-index: 100;
+    border-radius: 50%;
+    width: 30px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+p {
+    max-width: 880px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.50);
+    color: aliceblue;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .card {
+        width: 75%;
+    }
 }
