@@ -11,9 +11,7 @@ const container = document.getElementById('cont');
 
 axios.get(endPoint)
     .then((res) => {
-        console.log(res.data);
-
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < res.data.length; i++) {
             const card = document.createElement('div');
             card.classList.add('card');
             card.innerHTML = `<img src="img/pin.svg" alt="pin" class="pin">
